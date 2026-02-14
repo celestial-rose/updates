@@ -1,0 +1,45 @@
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "celestial-updates",
+	"main": "src/index.ts",
+	"compatibility_date": "2025-09-27",
+	"observability": {
+		"enabled": true
+	},
+	"env": {
+		"production": {
+			"r2_buckets": [
+				{
+					"bucket_name": "expo-updates-assets",
+					"binding": "EXPO_UPDATES_BUCKET",
+					"jurisdiction": "eu"
+				}
+			],
+			"kv_namespaces": [
+				{
+					"binding": "EXPO_UPDATES_KV",
+					"id": "974036ff949e4cedae3692c60e9ccdda"
+				}
+			]
+		},
+		"staging": {
+			"r2_buckets": [
+				{
+					"bucket_name": "expo-updates-assets-staging",
+					"binding": "EXPO_UPDATES_BUCKET",
+					"jurisdiction": "eu"
+				}
+			],
+			"kv_namespaces": [
+				{
+					"binding": "EXPO_UPDATES_KV",
+					"id": "EXPO_UPDATES_KV_STAGING{ID}"
+				}
+			]
+		}
+	}
+}

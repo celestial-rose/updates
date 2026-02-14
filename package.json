@@ -1,0 +1,30 @@
+{
+	"name": "celestial-updates",
+	"version": "1.0.0",
+	"license": "MIT",
+	"private": true,
+	"scripts": {
+		"deploy": "wrangler deploy",
+		"dev": "wrangler dev",
+		"start": "wrangler dev",
+		"test": "vitest",
+		"cf-typegen": "wrangler types",
+		"publish:prod": "bun scripts/publish.ts",
+		"publish:staging": "bun scripts/publish.ts --env staging"
+	},
+	"devDependencies": {
+		"@cloudflare/vitest-pool-workers": "^0.8.19",
+		"@cloudflare/workers-types": "^4.20241230.0",
+		"@types/node": "^25.0.9",
+		"typescript": "^5.5.2",
+		"vitest": "~3.2.0",
+		"wrangler": "^4.59.2"
+	},
+	"dependencies": {
+		"@expo/config": "^12.0.13",
+		"hono": "^4.11.4",
+		"mime": "^4.1.0",
+		"readline": "^1.3.0",
+		"structured-headers": "^2.0.2"
+	}
+}

@@ -1,0 +1,6 @@
+# This file configures the code owners for the repository.
+# These owners will be automatically requested for review when a PR touches their files.
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Match all files
+* @celestial-rose
