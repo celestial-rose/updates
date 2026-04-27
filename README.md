@@ -93,7 +93,7 @@ We love [Expo Updates](https://docs.expo.dev/eas-update/introduction/). It allow
     
     *Manual Option:*
     ```bash
-    bunx wrangler secret put EXPO_UPDATES_PRIVATE_KEY_MY_APP < code-signing/private-key.pem
+    bunx wrangler secret put EXPO_UPDATES_PRIVATE_KEY_MY_APP --environment {ENVIRONMENT} < code-signing/private-key.pem
     ```
 
 6.  **Deploy:**
@@ -112,6 +112,7 @@ In your Expo project's `app.json` (or `app.config.js`), configure the `updates` 
       "expo": {
         "slug": "my-app",
         "runtimeVersion": "1",
+        "platforms": ["ios", "android"],
         "updates": {
           "url": "https://my-expo-updates-server.my-subdomain.workers.dev/my-app/api/manifest",
           "enabled": true,
