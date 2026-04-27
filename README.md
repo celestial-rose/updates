@@ -40,8 +40,8 @@ We love [Expo Updates](https://docs.expo.dev/eas-update/introduction/). It allow
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/celestial-updates.git
-    cd celestial-updates
+    git clone https://github.com/celestial-rose/updates.git
+    cd updates
     bun install
     ```
 
