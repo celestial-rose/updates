@@ -49,7 +49,7 @@ We love [Expo Updates](https://docs.expo.dev/eas-update/introduction/). It allow
     You need to create an R2 bucket and a KV namespace.
     ```bash
     # Create KV Namespace
-    bunx wrangler kv:namespace create EXPO_UPDATES_KV
+    bunx wrangler kv namespace create EXPO_UPDATES_KV
 
     # Create R2 Bucket (optional: specify jurisdiction)
     bunx wrangler r2 bucket create expo-updates-assets --jurisdiction eu
