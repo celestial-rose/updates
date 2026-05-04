@@ -9,7 +9,7 @@
 		"start": "wrangler dev",
 		"test": "vitest",
 		"cf-typegen": "wrangler types",
-		"publish:prod": "bun scripts/publish.ts",
+		"publish:prod": "bun scripts/publish.ts --remote",
 		"publish:staging": "bun scripts/publish.ts --env staging"
 	},
 	"devDependencies": {
