@@ -380,7 +380,7 @@ Example app.json configuration:
 	console.log(`Running expo export to ${localUpdatePath}...`);
 	try {
         // We run this in the Expo Project Root
-		execSync(`bunx expo prebuild`, { cwd: projectRoot, stdio: 'inherit' });
+		execSync(`bunx expo prebuild --clean`, { cwd: projectRoot, stdio: 'inherit' });
 		execSync(`bunx expo export --output-dir "${localUpdatePath}"`, { cwd: projectRoot, stdio: 'inherit' });
 	} catch (e) {
 		console.error("❌ Failed to run expo export. Please check the logs above.");
